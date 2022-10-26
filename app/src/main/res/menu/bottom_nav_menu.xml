@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstFragment"
+        android:icon="@drawable/ic_baseline_list_alt_24"
+        android:title="@string/birthday_list" />
+    <item
+        android:id="@+id/secondFragment"
+        android:icon="@drawable/ic_baseline_post_add_24"
+        android:title="@string/add_birthday" />
+    <item
+        android:id="@+id/thirdFragment"
+        android:icon="@drawable/ic_baseline_settings_applications_24"
+        android:title="@string/settings" />
+</menu>

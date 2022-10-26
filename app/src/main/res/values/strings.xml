@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Birthday Reminder App</string>
+    <string name="no_data_found">No Data Found! \n\n Please add your friends birthday.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="birthday_list">Birthday List</string>
+    <string name="add_birthday">Add Birthday</string>
+    <string name="settings">Settings</string>
+    <string name="name">Name</string>
+    <string name="name_label">Name:</string>
+    <string name="birthday">Birthday</string>
+    <string name="birth_day_label">Birthday:</string>
+    <string name="add_birth_day_of_your_friend">Add Birthday Of Your Friend</string>
+</resources>
