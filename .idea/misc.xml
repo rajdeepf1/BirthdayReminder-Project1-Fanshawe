@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.142" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.23853615520282187" />
         <entry key="app/src/main/res/layout-land/activity_splash.xml" value="0.11155202821869488" />
         <entry key="app/src/main/res/layout-land/fragment_add_birthday.xml" value="0.11155202821869488" />
         <entry key="app/src/main/res/layout-land/fragment_list.xml" value="0.11155202821869488" />

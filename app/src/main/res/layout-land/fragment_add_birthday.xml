@@ -2,23 +2,25 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragments.AddBirthdayFragment"
     android:paddingHorizontal="16dp">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
         >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +39,7 @@
         app:lottie_loop="true"
         app:lottie_fileName="427-happy-birthday.json"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         />
 
     <LinearLayout
@@ -65,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/labelName"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="25dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -106,7 +108,9 @@
                 android:id="@+id/date_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/birthday" />
+                android:hint="@string/birthday"
+                android:editable="false"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -123,21 +127,36 @@
 
     </RelativeLayout>
 
-    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnSaveBirthday"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView1"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/add_birthday"
-                android:background="@drawable/rounded_corner"
-                android:textColor="@color/white"
-                android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginBottom="20dp"
+                android:layout_height="120dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="53513-confetti.json"
+                app:lottie_loop="false"
                 />
 
-        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveBirthday"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add_birthday"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
 
     </ScrollView>
 

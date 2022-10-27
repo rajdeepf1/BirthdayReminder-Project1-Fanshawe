@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
+import com.airbnb.lottie.LottieAnimationView
 import com.google.android.material.textfield.TextInputEditText
 import com.rajdeepsingh.birthdayreminderapp.R
 import com.rajdeepsingh.birthdayreminderapp.activities.utils.Constant
@@ -24,6 +25,7 @@ class AddBirthdayFragment : Fragment(), View.OnClickListener {
     lateinit var date_edit_text: TextInputEditText
     lateinit var btnSaveBirthday: AppCompatButton
     lateinit var name_edit_text: TextInputEditText
+    lateinit var animationView1: LottieAnimationView
     lateinit var list: ArrayList<BirthdayModelDataClass>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,9 +43,11 @@ class AddBirthdayFragment : Fragment(), View.OnClickListener {
         date_edit_text = view.findViewById(R.id.date_edit_text)
         name_edit_text = view.findViewById(R.id.name_edit_text)
         btnSaveBirthday = view.findViewById(R.id.btnSaveBirthday)
+        animationView1 = view.findViewById(R.id.animationView1)
 
         calendarImageView.setOnClickListener(this)
         btnSaveBirthday.setOnClickListener(this)
+        date_edit_text.setOnClickListener(this)
 
         val data: ArrayList<BirthdayModelDataClass> = SharedPref.getObject(requireContext())
 
@@ -88,29 +92,27 @@ class AddBirthdayFragment : Fragment(), View.OnClickListener {
                     ).show()
                 } else {
                     list.add(BirthdayModelDataClass(name_of_a_person, birthday_of_a_person))
-                    var res: Boolean = SharedPref.saveObject(requireContext(), list)
-                    if (res) Toast.makeText(requireContext(), "Data Saved !", Toast.LENGTH_SHORT)
-                        .show() else Toast.makeText(
-                        requireContext(),
-                        "Data Not Saved !",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    val res: Boolean = SharedPref.saveObject(requireContext(), list)
+                    if (res) {
+                        animationView1.playAnimation()
+                        Toast.makeText(requireContext(), "Data Saved !", Toast.LENGTH_SHORT)
+                            .show()
+                    } else {
+                        Toast.makeText(
+                            requireContext(),
+                            "Data Not Saved !",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
 
                 }
+            }
+
+            R.id.date_edit_text -> {
+                calendarImageView.performClick()
             }
 
         }
     }
 
-//    companion object {
-//
-//        @JvmStatic
-//        fun newInstance(param1: String, param2: String) =
-//            AddBirthdayFragment().apply {
-//                arguments = Bundle().apply {
-//                    putString(ARG_PARAM1, param1)
-//                    putString(ARG_PARAM2, param2)
-//                }
-//            }
-//    }
 }

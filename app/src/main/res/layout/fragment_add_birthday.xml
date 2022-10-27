@@ -2,15 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragments.AddBirthdayFragment"
     android:paddingHorizontal="16dp">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="none"
         >
 
@@ -38,7 +39,7 @@
         app:lottie_loop="true"
         app:lottie_fileName="427-happy-birthday.json"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         />
 
     <LinearLayout
@@ -126,35 +127,37 @@
 
     </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView1"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="53513-confetti.json"
+                app:lottie_loop="false"
+                />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveBirthday"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add_birthday"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            />
+        </RelativeLayout>
 
     </LinearLayout>
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="false"
-        app:lottie_fileName="53513-confetti.json"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginTop="20dp"
-        />
 
     </LinearLayout>
 
 
     </ScrollView>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSaveBirthday"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/add_birthday"
-        android:background="@drawable/rounded_corner"
-        android:textColor="@color/white"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="20dp"
-        />
-
 
 </FrameLayout>
