@@ -8,12 +8,14 @@
         <entry key="app/src/main/res/layout-land/activity_splash.xml" value="0.11155202821869488" />
         <entry key="app/src/main/res/layout-land/fragment_add_birthday.xml" value="0.11155202821869488" />
         <entry key="app/src/main/res/layout-land/fragment_list.xml" value="0.11155202821869488" />
+        <entry key="app/src/main/res/layout-land/fragment_settings.xml" value="0.23853615520282187" />
         <entry key="app/src/main/res/layout-land/item_layout.xml" value="0.11155202821869488" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/fragment_add_birthday.xml" value="0.27529923830250275" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.39336830913156706" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.2977188110351563" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.28072916666666664" />

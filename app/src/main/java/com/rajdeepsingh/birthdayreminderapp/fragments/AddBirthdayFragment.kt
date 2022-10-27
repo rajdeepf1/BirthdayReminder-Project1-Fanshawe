@@ -39,15 +39,8 @@ class AddBirthdayFragment : Fragment(), View.OnClickListener {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_add_birthday, container, false)
-        calendarImageView = view.findViewById(R.id.calendarImageView)
-        date_edit_text = view.findViewById(R.id.date_edit_text)
-        name_edit_text = view.findViewById(R.id.name_edit_text)
-        btnSaveBirthday = view.findViewById(R.id.btnSaveBirthday)
-        animationView1 = view.findViewById(R.id.animationView1)
 
-        calendarImageView.setOnClickListener(this)
-        btnSaveBirthday.setOnClickListener(this)
-        date_edit_text.setOnClickListener(this)
+        initialization(view = view)
 
         val data: ArrayList<BirthdayModelDataClass> = SharedPref.getObject(requireContext())
 
@@ -59,6 +52,18 @@ class AddBirthdayFragment : Fragment(), View.OnClickListener {
 
 
         return view
+    }
+
+    private fun initialization(view: View) {
+        calendarImageView = view.findViewById(R.id.calendarImageView)
+        date_edit_text = view.findViewById(R.id.date_edit_text)
+        name_edit_text = view.findViewById(R.id.name_edit_text)
+        btnSaveBirthday = view.findViewById(R.id.btnSaveBirthday)
+        animationView1 = view.findViewById(R.id.animationView1)
+
+        calendarImageView.setOnClickListener(this)
+        btnSaveBirthday.setOnClickListener(this)
+        date_edit_text.setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -97,6 +102,8 @@ class AddBirthdayFragment : Fragment(), View.OnClickListener {
                         animationView1.playAnimation()
                         Toast.makeText(requireContext(), "Data Saved !", Toast.LENGTH_SHORT)
                             .show()
+                        name_edit_text.setText("")
+                        date_edit_text.setText("")
                     } else {
                         Toast.makeText(
                             requireContext(),

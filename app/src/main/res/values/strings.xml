@@ -11,4 +11,6 @@
     <string name="birthday">Birthday</string>
     <string name="birth_day_label">Birthday:</string>
     <string name="add_birth_day_of_your_friend">Add Birthday Of Your Friend</string>
+    <string name="app_description"><i>Do you forget wishing people on their birthday or anniversary? \n Don’t be embarrassed; we are in the same boat. \n Let technology come to your rescue. This app is to help you remember dates with ease.</i> \n \n \u25A0 <b>App Features:</b> \n \u25CF Add birthdays of your loved ones. \n \u25CF Delete particular entry and you can delete all entries by clicking one button. \n \u25CF Beautiful animations. \n \n \n \u25A0 <b>Developer Information:</b> \n \n <b>Name:</b> Rajdeep Singh \n \n <b>Student Id:</b> 1115120 \n \n <b>Assignment:</b> INFO-6124 Project 1F2022</string>
+    <string name="about_app">About App:</string>
 </resources>

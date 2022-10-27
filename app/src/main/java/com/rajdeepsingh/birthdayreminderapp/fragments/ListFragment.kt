@@ -35,13 +35,17 @@ class ListFragment : Fragment(), View.OnClickListener {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_list, container, false)
+        initialization(view = view)
+        setDataToRecyclerView()
+        return view
+    }
+
+    private fun initialization(view: View) {
         recyclerView = view.findViewById(R.id.recyclerView)
         noDataFoundTV = view.findViewById(R.id.noDataFoundTV)
         deleteAllDataFab = view.findViewById(R.id.deleteAllDataFab)
         deleteAllDataFab.setOnClickListener(this)
         list = ArrayList()
-        setDataToRecyclerView()
-        return view
     }
 
     fun setDataToRecyclerView() {
@@ -50,7 +54,8 @@ class ListFragment : Fragment(), View.OnClickListener {
             noDataFoundTV.visibility = View.GONE
             deleteAllDataFab.visibility = View.VISIBLE
             // This will pass the ArrayList to our Adapter
-            adapter = BirthdayRecyclerViewAdapter(requireContext(), list,noDataFoundTV,deleteAllDataFab)
+            adapter =
+                BirthdayRecyclerViewAdapter(requireContext(), list, noDataFoundTV, deleteAllDataFab)
 
             // Setting the Adapter with the recyclerview
             recyclerView.adapter = adapter
